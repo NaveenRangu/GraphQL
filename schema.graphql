@@ -1,0 +1,34 @@
+type Client{
+    clientIntID: int!
+    clientID: String!
+    deleteFg: 
+
+    ClietIndividual: ClietIndividual
+    ClientAddress: [ClientAddress]!
+}
+
+type ClietIndividual{
+    clientIntID: int!
+    firstName: String!
+    lastName: String!
+    occupation: String!
+    spouseFirstName: String
+    federalTaxID: String
+
+    client: Client!
+}
+
+type ClientAddress{
+    addrLine1: String!
+    addrLine2: String!
+    addrLine3: String
+    city: String!
+    clientAddressIntID: int!
+    clientIntID: int!
+    firmAddrTypeIntID: int
+    postalCode: String
+    stateOrRegion: String!
+
+
+    client: Client!
+}
